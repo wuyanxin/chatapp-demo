@@ -68,6 +68,7 @@ socketIO.on('connection', function (socket) {
 router.get('/room/:roomID', function (req, res) {
   var roomID = req.params.roomID;
 
+  // 渲染页面数据(见views/room.hbs)
   res.render('room', {
     roomID: roomID,
     users: roomInfo[roomID]
